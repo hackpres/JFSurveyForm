@@ -1,0 +1,144 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.hero {
+    background-color: gray;
+    width: 100%;
+    padding: 0 2em 6rem;
+    font-family: gin, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2vmin;
+    color: rgb(248, 202, 52);
+    text-align: center;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    margin: auto;
+    z-index: 1;
+}
+
+p {
+    color: rgb(36, 36, 36);
+}
+
+.logo {
+    /*background: pink;*/
+    margin: 2rem auto .5em;
+    size: 6vmin;
+}
+
+.title {
+    /*background: lightblue;*/
+    font-family: cubano, sans-serif;
+    font-weight: 400;
+    font-size: 350%;
+    margin: auto;
+}
+
+.bg {
+    position: relative;
+    color: black;
+    z-index: -1;
+}
+.bg::after {
+    content: '';
+    position: absolute;
+    size: 24vmin;
+    top: 0;
+    left: 0;
+
+    border-width: 50vw;
+    border-style: solid;
+
+    border-color: gray rgb(243, 243, 243) rgb(243, 243, 243) gray;
+}
+
+.body {
+    font-family: cubano-sharp, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: auto;
+}
+.form {
+    width: 60%;
+    margin: auto;
+    padding: 2em 4em;
+    z-index: 1;
+}
+
+.select {
+    font-family: cubano-sharp, sans-serif;
+}
+
+.moreInfoStyle {
+
+}
+
+.moreInfoVision {
+
+}
+
+.moreInfoVisionCont {
+
+}
+
+.termsConditions {
+
+}
+
+.vision {
+    width: 50vw;
+    height: 12vh;
+    text-align: start;
+}

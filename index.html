@@ -13,24 +13,26 @@
 
     <main class="vid-request-form">
         <section class="front">
-            <img src="./assets/images/jFProductionLogo.PNG" alt="Johnson Ferry Baptist Church Production logo" class="jfprod-logo">
+            <div class="logo-container">
+                <img src="./assets/images/jFProductionLogo.PNG" alt="Johnson Ferry Baptist Church Production logo" class="logo">
+            </div>
+            
             <h1 class="title">JF Production</h1>
-            <p>Video Request Form</p>
+            <h2 class="front-title">Video Request Form</h2>
 
             <form action="" class="form">
-                <label for="fname">Name:</label>
-                    <input type="text" id="fname" name="first" placeholder="First" required>
-                    <input type="text" id="lname" name="last" placeholder="Last" required>
+                <label class="form-label" for="fname">Name</label>
+                    <input class="form-text" type="text" id="fname" name="first" placeholder="First" required>
+                    <input class="form-text" type="text" id="lname" name="last" placeholder="Last" required>
                 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-text" type="email" id="email" name="email" required>
 
-                    <label for="ministry">Ministry:</label>
-                    <input type="text" id="ministry" name="ministry" required>
+                    <label class="form-label" for="ministry">Ministry</label>
+                    <input class="form-text"  type="text" id="ministry" name="ministry" required>
 
-                    <label for="style">What style video are you requesting?</label>
-                    <input type="button" class="moreInfoStyle" name="More Information" value="?">
-                    <select class="select" id="style" required>
+                    <label class="form-label" for="style">What style video are you requesting?<span class="form-tooltip" data-tooltip="Please select the option that you feel most reflects what you're hoping to make. Otherwise just choose &#34Other&#34">&#9776</span></label>
+                    <select class="form-select" id="style" required>
                         <option value="Promotion Video" selected>Promotion Video</option>
                         <option value="Recap Video">Recap Video</option>
                         <option value="Testimony Video">Testimony Video</option>
@@ -40,28 +42,23 @@
                         <option value="Other">Other</option>
                     </select>
                 
-                    <label for="vision">Vision/Ideas:</label>
-                    <input type="button" class="more-info" name="More Information" value="?">
-                    <input type="text" class="vision" id="vision" name="vision" placeholder="EXAMPLE: Here's where I got the idea for my video...this church did something similar. Here's a link:">
+                    <label class="form-label" for="vision">Vision/Ideas <span class="form-tooltip" data-tooltip="Share the vision you have for this project! &#013&#013If you don't yet have a vision that's okay too! We can help you create the perfect video for your need">&#9776</span></label>
+                    <input class="form-text" type="text" class="vision" id="vision" name="vision" placeholder="EXAMPLE: Here's where I got the idea for my video...">
 
-                    <label for="file">Vision/Ideas (Continued):</label>
-                    <input type="button" class="more-info-cont" name="More Information" value="?">
-                    <input type="file" class="file" id="file" name="file">
+                    <label class="form-label" for="file">Vision/Ideas (send us a link) <span class="form-tooltip" data-tooltip="Upload any files pertaining to your vision here. This includes any working script or outline.">&#9776</span></label>
+                    <input class="form-upload" type="file" class="file" id="file" name="file">
 
-                    <p class="agreement">
-                        <input type="checkbox" class="form-checkbox" id="agreement" name="agreement">
-                    <label for="terms&conditions">Terms & Conditions: I understand that this is simply a request form, and will need to be reviewed by the Video Production staff for approval.</label>
+                    <p class="agreement flex-center">
+                        <input type="checkbox" class="form-checkbox" id="agreement" name="agreement" required>
+                        <label class="tnc-label" for="terms&conditions"><strong>Terms & Conditions:</strong> I understand that this is simply a request form, and will need to be reviewed by the Video Production staff for approval.</label>
                     </p>
                 
-                
-                    <input type="button" Class="terms-conditions" name="terms and conditions" required>
-
-                    <input type="submit" value="Submit">
+                    <button class="button">Submit</button>
             </form>
         </section>
 
         <aside class="back">
-            <h2 class="subheading">JF Video</h2>
+            <h2 class="subtitle">JF Video</h2>
             <p class="about">
                 Welcome to the Johnson Ferry video request form! if you're looking to have a video created for your ministry, or video coverage fo your ministry event/gathering, you're in the right place.
                 If you have a Graphic Design or Photography request, please see the Communications request form.

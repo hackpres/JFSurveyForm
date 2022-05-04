@@ -10,7 +10,7 @@
     --fs-small: .75rem;
 
     --clr-1: hsl(0, 0, 100%);
-    --clr-2: hsl(195, 74%, 39%);
+    --clr-2: hsl(195, 90%, 32%);
     --clr-3: hsl(202, 37%, 23%);
     --clr-4: hsl(203, 47%, 14%);
     --clr-5: hsl(38, 85%, 56%);
@@ -18,12 +18,204 @@
     --clr-dark: rgb(0,0,0,.25);
     --clr-body: rgb(255,255,255,.8);
 
-    --primary-font: cubano-sharp, sans-serif;
-    --alt-font: gin, serif;
-    --title-font: cubano, sans-serif;
+    --primary-font: neue-haas-unica, sans-serif;;
+    --alt-font: pt-sans-pro, sans-serif;
+    --title-font: tarzana-wide, sans-serif;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--primary-font);
+    background-color: var(--clr-4);
+    background-image: url(https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/275419495_10160077924597299_3928352268618903907_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=a26aad&_nc_ohc=ma42lZ4O0vMAX9XBTyq&_nc_ht=scontent-atl3-1.xx&oh=00_AT9_tBhVMp-iqfbw4XoQq8yiHE-JJHMTs4Re_gxExOjGRg&oe=6277A174);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-body);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-1);
+    line-height: 1.6;
+}
+
+p {
+    margin: 0 0 .25em;
+}
+
+.title, .subtitle {
+    color: var(--clr-1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.title {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-3);
+}
+
+.subtitle {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-1);
+    margin-top: 0;
+}
+
+.front-title {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-2);
+}
+
+.agreement {
+    font-size: var(--fs-small);
+}
+
+.about {
+    font-size: var(--fs-1);
+    margin: 2rem 0 0 0;
+    padding: 0;
+}
+
+.logo-container {
+    display: inline-block;
+}
+
+.button{
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    background: var(--clr-5);
+    margin-top: .5rem;
+    padding: .5em 1.75em;
+    border-radius: 3px;
+    color: rgba(0, 0, 0, .8);
+    font-weight: var(--fw-3);
+    transform: scale(1);
+    transition: transform ease-in-out 150;
+}
+
+.button:hover {
+    transform: scale(1.1)
+}
+
+.logo {
+    height: 150px;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+}
+
+.vid-request-form {
+    display: grid;
+    width: 960px;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 35% minmax(500px, 1fr) 3em;
+    position: relative;
+}
+
+.front {
+    order: 2;
+    background-color: var(--clr-2);
+    background-image: linear-gradient(to bottom right, rgba(0,0,0,0), rgba(0,0,0,.7));
+    padding: 3rem;
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+}
+
+.back {
+    order: 1;
+    grid-row: 2 / 3;
+    padding: 3rem;
+}
+
+.back::after {
+    content: "";
+    display: block;
+    background-color: var(--clr-3);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    grid-row: 2 / 3;
+}
+
+.form {
+    margin: 1.5em 0 0;
+}
+
+.form-label {
+    display: flex;
+}
+
+.form-text, .form-select, .form-upload {
+    all: unset;
+    display: block;
+    margin: .25em 0 .5em;
+    background: var(--clr-dark);
+    width: 95%;
+    padding: .6em;
+}
+
+input[type=file]::file-selector-button {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    background: var(--clr-dark);
+    margin-top: .5rem;
+    margin-right: 1.5em;
+    padding: .3em .75em;
+    border-radius: 3px;
+    color: var(--clr-1);
+    font-weight: var(--fw-2);
+}
+
+#fname, #lname {
+    width: 44.5%;
+    display: inline-flex;
+}
+
+#lname {
+    justify-content: flex-end;
+}
+
+.form-tooltip {
+    font-size: var(--fs-small);
+    background: var(--clr-dark);
+    display: inline-block;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: .5em;
+    position: relative;
+}
+
+.form-tooltip::after {
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    padding: 1em;
+    background: var(--clr-4);
+    bottom: 1.5em;
+    text-align: left;
+    width: 179px;
+    color: var(--clr-1);
+}
+
+.form-tooltip:hover::after {
+    display: block;
+}
+
+.form-checkbox {
+    margin-right: .5em;
+}

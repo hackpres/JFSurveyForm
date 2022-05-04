@@ -11,57 +11,63 @@
         <script type="text/javascript" src="./assets/js/index.js"></script>
     </head>
 
-    <header class="hero">
-        <img class="logo"  src="./assets/images/jFProductionLogo.PNG" alt="Johnson Ferry Production Logo" width="285" height="285">
-    </header>
+    <main class="vid-request-form">
+        <section class="front">
+            <img src="./assets/images/jFProductionLogo.PNG" alt="Johnson Ferry Baptist Church Production logo" class="jfprod-logo">
+            <h1 class="title">JF Production</h1>
+            <p>Video Request Form</p>
 
-    <div class="bg"></div>
-
-    <main class="form-container">
-        <h1 class="title">Video Request Form</h1>
-
-        <p>
-            Welcome to the Johnson Ferry video request form! if you're looking to have a video created for your ministry, or video coverage fo your ministry event/gathering, you're in the right place.
-            If you have a Graphic Design or Photography request, please see the Communications request form.
-        </p>
-
-        <form class="form" action="media@jfbc.org" method="post">
-            <fieldset>
-                <label for="Name">Name:</label>
-                <input type="text" id="fname" name="first" placeholder="First" required>
-                <input type="text" id="lname" name="last" placeholder="Last" required>
+            <form action="" class="form">
+                <label for="fname">Name:</label>
+                    <input type="text" id="fname" name="first" placeholder="First" required>
+                    <input type="text" id="lname" name="last" placeholder="Last" required>
                 
-                <label for="Email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="Ministry">Ministry:</label>
-                <input type="text" id="ministry" name="ministry" required>
+                    <label for="ministry">Ministry:</label>
+                    <input type="text" id="ministry" name="ministry" required>
 
-                <label for="Style">What style video are you requesting?</label>
-                <input type="button" class="moreInfoStyle" name="More Information" value="?">
-                <select class="select" id="style" required>
-                    <option value="Promotion Video" selected>Promotion Video</option>
-                    <option value="Recap Video">Recap Video</option>
-                    <option value="Testimony Video">Testimony Video</option>
-                    <option value="Video for specific event">Video for specific event</option>
-                    <option value="Video series">Video Series</option>
-                    <option value="Event Coverage">Event Coverage</option>
-                    <option value="Other">Other</option>
-                </select>
+                    <label for="style">What style video are you requesting?</label>
+                    <input type="button" class="moreInfoStyle" name="More Information" value="?">
+                    <select class="select" id="style" required>
+                        <option value="Promotion Video" selected>Promotion Video</option>
+                        <option value="Recap Video">Recap Video</option>
+                        <option value="Testimony Video">Testimony Video</option>
+                        <option value="Video for specific event">Video for specific event</option>
+                        <option value="Video series">Video Series</option>
+                        <option value="Event Coverage">Event Coverage</option>
+                        <option value="Other">Other</option>
+                    </select>
                 
-                <label for="Vision">Vision/Ideas:</label>
-                <input type="button" class="moreInfoVision" name="More Information" value="?">
-                <input type="text" class="vision" id="Vision" name="Vision" placeholder="EXAMPLE: Here's where I got the idea for my video...this church did something similar. Here's a link:">
+                    <label for="vision">Vision/Ideas:</label>
+                    <input type="button" class="more-info" name="More Information" value="?">
+                    <input type="text" class="vision" id="vision" name="vision" placeholder="EXAMPLE: Here's where I got the idea for my video...this church did something similar. Here's a link:">
 
-                <label for="Vision(Continued)">Vision/Ideas (Continued):</label>
-                <input type="button" class="moreInfoVisionCont" name="More Information" value="?">
-                <input type="file" class="file" id="File" name="File">
+                    <label for="file">Vision/Ideas (Continued):</label>
+                    <input type="button" class="more-info-cont" name="More Information" value="?">
+                    <input type="file" class="file" id="file" name="file">
 
-                <label for="Terms&Conditions">Terms & Conditions:</label>
-                <p>I understand that this is simply a request form, and will need to be reviewed by the Video Production staff for approval.</p><input type="button" Class="termsConditions" name="Terms and Conditions" required>
+                    <p class="agreement">
+                        <input type="checkbox" class="form-checkbox" id="agreement" name="agreement">
+                    <label for="terms&conditions">Terms & Conditions: I understand that this is simply a request form, and will need to be reviewed by the Video Production staff for approval.</label>
+                    </p>
+                
+                
+                    <input type="button" Class="terms-conditions" name="terms and conditions" required>
 
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
+                    <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <aside class="back">
+            <h2 class="subheading">JF Video</h2>
+            <p class="about">
+                Welcome to the Johnson Ferry video request form! if you're looking to have a video created for your ministry, or video coverage fo your ministry event/gathering, you're in the right place.
+                If you have a Graphic Design or Photography request, please see the Communications request form.
+            </p>
+        </aside>
     </main>
+    
 </html>
+
